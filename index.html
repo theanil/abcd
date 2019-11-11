@@ -31,7 +31,7 @@
 
     Hello 
 
-    <script type="text/javascript".>
+    <script type="text/javascript">
       alert('hi');
 
       navigator.camera.getPicture(onSuccess, onFail, { quality: 25,
@@ -39,14 +39,17 @@
     });
 
     function onSuccess(imageData) {
-        var image = document.getElementById('myImage');
+        //var image = document.getElementById('myImage');
         //image.src = "data:image/jpeg;base64," + imageData;
+        alert('12');
+
     }
 
     function onFail(message) {
         alert('Failed because: ' + message);
     }
 
+    alert('456');
     </script>
   
 
