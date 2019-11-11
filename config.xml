@@ -120,19 +120,7 @@ android-versionCode="151"
     <!-- Define app icon for each platform. -->
 
 
-     <config-file platform="ios" target="*-Info.plist" parent="ITSAppUsesNonExemptEncryption">
-        <key>ITSAppUsesNonExemptEncryption</key><false/>
-    </config-file>
-
-    <platform name="ios">
-      <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
-          <dict>
-              <key>NSAllowsArbitraryLoads</key>
-              <true/>
-          </dict>
-      </config-file>
-    </platform>
-    
+     
     <access origin="*"/>
     <access origin="tel:*" launch-external="yes" />
     <access origin="mailto:*" launch-external="yes" />
