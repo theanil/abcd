@@ -118,63 +118,7 @@ android-versionCode="151"
 
 
     <!-- Define app icon for each platform. -->
-    <icon src="logo.png" />
-    <icon src="logo.png"   gap:platform="android"    gap:qualifier="ldpi" />
-    <icon src="logo.png"   gap:platform="android"    gap:qualifier="mdpi" />
-    <icon src="logo.png"   gap:platform="android"    gap:qualifier="hdpi" />
-    <icon src="logo.png"   gap:platform="android"    gap:qualifier="xhdpi" />
 
-    <icon src="icons/Icon-29.png"             gap:platform="ios"        width="29" height="29" />
-    <icon src="icons/Icon-58.png"             gap:platform="ios"        width="58" height="58" />
-    <icon src="icons/Icon-40.png"             gap:platform="ios"        width="40" height="40" />
-    <icon src="icons/Icon-50.png"             gap:platform="ios"        width="50" height="50" />
-    <icon src="icons/Icon-100.png"            gap:platform="ios"        width="100" height="100" />
-    <icon src="icons/Icon-72.png"             gap:platform="ios"        width="72" height="72" />
-    <icon src="icons/Icon-144.png"            gap:platform="ios"        width="144" height="144" />
-    <icon src="icons/Icon-60.png"             gap:platform="ios"        width="60" height="60" />
-    <icon src="icons/Icon-120.png"            gap:platform="ios"        width="120" height="120" />
-    <icon src="icons/Icon-57.png"             gap:platform="ios"        width="57" height="57" />
-    <icon src="icons/Icon-114.png"            gap:platform="ios"        width="114" height="114" />
-    <icon src="icons/Icon-76.png"             gap:platform="ios"        width="76" height="76" />
-    <icon src="icons/Icon-152.png"            gap:platform="ios"        width="152" height="152" />
-
-    <!-- Define app splash screen for each platform. -->
-    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-ldpi" />
-    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-mdpi" />
-    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-xhdpi" />
-
-    <gap:splash src="images/screen-225.png"    gap:platform="blackberry" />
-    
-    <gap:splash src="icons/320-480.png"        gap:platform="ios"     width="320" height="480" />
-    <gap:splash src="icons/640-960.png"        gap:platform="ios"     width="640" height="960" />
-    <gap:splash src="icons/640-1136.png"       gap:platform="ios"     width="640" height="1136" />
-    <gap:splash src="icons/768-1024.png"       gap:platform="ios"     width="768" height="1024" />
-    <gap:splash src="icons/1024-768.png"       gap:platform="ios"     width="1024" height="768" />
-    
-    <gap:splash src="icons/750-1334.png"       gap:platform="ios"     width="750" height="1334" />
-    <gap:splash src="icons/1334-750.png"       gap:platform="ios"     width="1334" height="750" />
-    <gap:splash src="icons/1242-2208.png"      gap:platform="ios"     width="1242" height="2208" />
-    <gap:splash src="icons/2208-1242.png"      gap:platform="ios"     width="2208" height="1242" />
-    <gap:splash src="icons/1080-1920.png"      gap:platform="ios"     width="1080" height="1920" />
-    <gap:splash src="icons/1536-2048.png"      gap:platform="ios"     width="1536" height="2048" />
-
-    <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
-
-    <platform name="ios">
-
-         <config-file parent="NSBluetoothAlwaysUsageDescription" target="*-Info.plist">
-         <string>We use Bluetooth services to send you relevant information, when and where you need it</string>
-         </config-file>
-
-
-       <!--
-        <preference name="phonegap-version" value="cli-7.1.0" />
-        -->
-        <icon src="icons/Icon-1024.png"   width="1024" height="1024" />
-     </platform>
-
-    <splash src="images/800_480.png" />
 
      <config-file platform="ios" target="*-Info.plist" parent="ITSAppUsesNonExemptEncryption">
         <key>ITSAppUsesNonExemptEncryption</key><false/>
