@@ -55,6 +55,7 @@ android-versionCode="151"
     <plugin name="cordova-plugin-console" source="npm" />
     <plugin name="cordova-plugin-device" source="npm" />
     <plugin name="cordova-plugin-dialogs" source="npm" />
+    <plugin name="cordova-plugin-file"   source="npm" />
 
 
 
