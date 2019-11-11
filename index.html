@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+<!--
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file://* *; connect-src * blob: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;  font-src * https://fonts.gstatic.com https://fonts.gstatic.com; script-src 'self' http://genapi.bluapps.in 'unsafe-inline' 'unsafe-eval'; object-src 'self' http://genapi.bluapps.in; frame-src * gap://ready 'self'; img-src * data:;"/>
+
+    worker-src * gap://ready 'self'; 
+-->
+
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file://* *; connect-src * blob: data:; style-src 'self' 'unsafe-inline' https://use.fontawesome.com https://fonts.googleapis.com https://hfsthane.in;  script-src 'self' http://genapi.bluapps.in https://cdn.socket.io http://backup.bluapps.in https://hfsthane.in 'unsafe-inline' 'unsafe-eval'; object-src 'self' http://api.bluapps.in http://my.bluapps.in http://backup.bluapps.in http://genapi.bluapps.in https://hfsthane.in; img-src * data: 'unsafe-inline'; font-src 'self' * https://fonts.gstatic.com https://fonts.gstatic.com;" />              
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Blu Care v 1.2</title>
+    <!-- Path to Framework7 Library CSS-->
+
+    <!--<link rel="stylesheet" href="css/society_handler.css">-->
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+  
+
+    Hello 
+
+    <script>
+      alert('hi');
+
+      navigator.camera.getPicture(onSuccess, onFail, { quality: 25,
+        destinationType: Camera.DestinationType.DATA_URL
+    });
+
+    function onSuccess(imageData) {
+        var image = document.getElementById('myImage');
+        image.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
+    </script>
+  
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml 
+android-versionCode="151" 
+-->
+
+<widget id="in.abcd" version="1.0.0" versionCode="100" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+<!--<widget id="in.bluapps.blucare" version="1.5.11" versionCode="10511" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">-->
+
+    <name>abcd Care</name>
+    <description>abcd Care</description>
+
+    <author href="http://phonegap.com" email="support@phonegap.com">Anil Team</author>
+
+    <!--
+    <preference name='phonegap-version' value='cli-7.0.1' />
+    <preference name='pgb-builder-version' value='2' />
+    -->
+
+    <!-- Define the main entry-point to the application -->
+    <content src="index.html" />
+
+    <!--
+        If you do not want any permissions to be added to your app, add the
+        following tag to your config.xml; you will still have the INTERNET
+        permission on your app, which PhoneGap requires.
+    -->
+    <preference name="permissions"                value="none"/>
+
+    <!-- Customize your app and platform with the preference element. -->
+    <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
+    <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+    <preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+    <preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+    <preference name="detect-data-types"          value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+    <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+    <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+    <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+    <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+    <!--<preference name="android-minSdkVersion"      value="7" /> -->             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <!--
+        Define a specific version of PhoneGap to build into your app.
+        <preference name="phonegap-version"       value="3.5.0" />
+    -->
+
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+ 
+    <plugin name="cordova-plugin-whitelist" source="npm" />
+
+    <plugin name="cordova-plugin-console" source="npm" />
+    <plugin name="cordova-plugin-device" source="npm" />
+    <plugin name="cordova-plugin-dialogs" source="npm" />
+
+
+
+    <plugin name="cordova-plugin-camera" source="npm" />
+
+
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+
+
+
+    <plugin name="cordova-plugin-media" source="npm" />
+
+   <plugin name="cordova-plugin-media-capture" source="npm" spec="*">
+      <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
+      <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />
+      <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
+    </plugin>
+
+    
+    <!-- Third party plugins -->
+    <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
+    <!--
+        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+    -->
+    
+    <!-- Define app icon for each platform. -->
+    <!--<icon src="icon.png" />-->
+    <!--<icon src="dvj.png" />-->
+    <!--<icon src="dvj-logo1.png" />-->
+
+        <!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+-->
+
+    <preference name="phonegap-version" value="cli-9.0.0" />
+
+    <platform name="android">
+        <!--<preference name="android-minSdkVersion" value="15"/>-->
+        <preference name="android-minSdkVersion" value="28"/>
+
+        <preference name="android-targetSdkVersion" value="28" />
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+
+        <allow-intent href="market:*" />
+    </platform>
+
+<!--
+    required in ios
+    <preference name="phonegap-version" value="cli-7.1.0" />
+-->
+
+
+    <!-- Define app icon for each platform. -->
+    <icon src="logo.png" />
+    <icon src="logo.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="logo.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="logo.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="logo.png"   gap:platform="android"    gap:qualifier="xhdpi" />
+
+    <icon src="icons/Icon-29.png"             gap:platform="ios"        width="29" height="29" />
+    <icon src="icons/Icon-58.png"             gap:platform="ios"        width="58" height="58" />
+    <icon src="icons/Icon-40.png"             gap:platform="ios"        width="40" height="40" />
+    <icon src="icons/Icon-50.png"             gap:platform="ios"        width="50" height="50" />
+    <icon src="icons/Icon-100.png"            gap:platform="ios"        width="100" height="100" />
+    <icon src="icons/Icon-72.png"             gap:platform="ios"        width="72" height="72" />
+    <icon src="icons/Icon-144.png"            gap:platform="ios"        width="144" height="144" />
+    <icon src="icons/Icon-60.png"             gap:platform="ios"        width="60" height="60" />
+    <icon src="icons/Icon-120.png"            gap:platform="ios"        width="120" height="120" />
+    <icon src="icons/Icon-57.png"             gap:platform="ios"        width="57" height="57" />
+    <icon src="icons/Icon-114.png"            gap:platform="ios"        width="114" height="114" />
+    <icon src="icons/Icon-76.png"             gap:platform="ios"        width="76" height="76" />
+    <icon src="icons/Icon-152.png"            gap:platform="ios"        width="152" height="152" />
+
+    <!-- Define app splash screen for each platform. -->
+    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="images/800_480.png"       gap:platform="android" gap:qualifier="port-xhdpi" />
+
+    <gap:splash src="images/screen-225.png"    gap:platform="blackberry" />
+    
+    <gap:splash src="icons/320-480.png"        gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="icons/640-960.png"        gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="icons/640-1136.png"       gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="icons/768-1024.png"       gap:platform="ios"     width="768" height="1024" />
+    <gap:splash src="icons/1024-768.png"       gap:platform="ios"     width="1024" height="768" />
+    
+    <gap:splash src="icons/750-1334.png"       gap:platform="ios"     width="750" height="1334" />
+    <gap:splash src="icons/1334-750.png"       gap:platform="ios"     width="1334" height="750" />
+    <gap:splash src="icons/1242-2208.png"      gap:platform="ios"     width="1242" height="2208" />
+    <gap:splash src="icons/2208-1242.png"      gap:platform="ios"     width="2208" height="1242" />
+    <gap:splash src="icons/1080-1920.png"      gap:platform="ios"     width="1080" height="1920" />
+    <gap:splash src="icons/1536-2048.png"      gap:platform="ios"     width="1536" height="2048" />
+
+    <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
+
+    <platform name="ios">
+
+         <config-file parent="NSBluetoothAlwaysUsageDescription" target="*-Info.plist">
+         <string>We use Bluetooth services to send you relevant information, when and where you need it</string>
+         </config-file>
+
+
+       <!--
+        <preference name="phonegap-version" value="cli-7.1.0" />
+        -->
+        <icon src="icons/Icon-1024.png"   width="1024" height="1024" />
+     </platform>
+
+    <splash src="images/800_480.png" />
+
+     <config-file platform="ios" target="*-Info.plist" parent="ITSAppUsesNonExemptEncryption">
+        <key>ITSAppUsesNonExemptEncryption</key><false/>
+    </config-file>
+
+    <platform name="ios">
+      <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+          <dict>
+              <key>NSAllowsArbitraryLoads</key>
+              <true/>
+          </dict>
+      </config-file>
+    </platform>
+    
+    <access origin="*"/>
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="mailto:*" launch-external="yes" />
+    
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-intent href="*" />
+    
+    <preference name="DisallowOverscroll" value="true" />
+    
+    <!--    
+        <preference name="deployment-target" value="7.0" />
+    --> 
+
+    <preference name="target-device" value="handset" />
+    
+    <gap:platform name="android" />
+    <!--
+        <gap:platform name="ios" />
+        <gap:platform name="webos" />
+        <gap:platform name="symbian" />
+        <gap:platform name="blackberry" />
+        <gap:platform name="winphone" />
+    -->
+        
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashMaintainAspectRatio" value="false" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+
+</widget>
